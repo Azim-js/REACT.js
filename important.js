@@ -7,3 +7,11 @@ const newArr=arr.map((val)=>{
 });
 console.log(arr);
 console.log(newArr);
+
+// reducer function () example
+
+const arrTwo=arr.reduce(function(acc,val){
+    return(acc+val);
+},0);
+
+console.log(arrTwo);
