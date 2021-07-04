@@ -69,3 +69,40 @@ console.log(extendedPerson);
 const arr2=[16,14];
 const arr3=[...wordArr,...arr2];
 console.log(arr3);
+
+// promises and async func()
+
+const myPromiseFunc=(num)=>{
+    return new Promise((resolve,reject)=>{
+        if(num>5){
+            resolve("number is > 5");
+        }else{
+            reject("number is < 5");
+        }
+    })
+}
+
+myPromiseFunc(3)
+.then((val)=>{
+    console.log(val);
+})
+.catch((err)=>{
+    console.log("ERROR:"+err)
+})
+
+// pending,resolve,reject states
+
+// Async await ()applied in fetch func for reciving api results  using async and await
+
+async function executeMpromise(){
+    
+    try{
+        const val=await myPromiseFunc(10);
+        console.log(val);
+    }
+    catch(error){
+        console.log("Error",err);
+    }
+}
+
+// executeMpromise();
