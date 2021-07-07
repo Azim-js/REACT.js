@@ -4,7 +4,10 @@ const Square = ({value}) => {
     // using{destructing method}
     // console.log(props);
     return (
-       <button type="button" className="square">{value}</button>
+       <button type="button" className="square" onClick={()=>{
+           console.log(value);
+    }
+       }>{value}</button>
     )
 }
 
