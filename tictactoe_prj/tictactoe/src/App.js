@@ -1,6 +1,9 @@
 import React,{useState} from "react";
 import Board from "./components/Board";
+import History from "./components/History";
+import SquareMessage from "./components/SquareMessage";
 import {calculateWinner} from "./helper"
+
 import "./styles/root.scss"
 
 const App=()=>{
@@ -13,7 +16,7 @@ const App=()=>{
     console.log(winner);
     // console.log(current.board);
     console.log(history);
-    const message = winner ? `Winner is ${winner}` : ` Next Player is ${current.isXNext ? 'X':'O'} `;
+    
     const handleSquareClick=(position)=>{
         // console.log(position);
         if(current.board[position] || winner){
@@ -31,13 +34,18 @@ const App=()=>{
         })
         SetCurrentMove(prev=>prev+1);
         // setisXNext(prev=>!prev);
+        
+    }
+    const moveTo=(move)=>{
+      SetCurrentMove(move);
     }
   return(
   < >
   <div className="app">
     <h1>X-O GAME !</h1>
-    <h2>{message}</h2>
+    <SquareMessage winner={winner} current={current} />
     <Board board={current.board} handleSquareClick={handleSquareClick}/>
+    <History history={history} moveTo={moveTo} currentMove={currentMove}/>
     </div>
     
   </>);
