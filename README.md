@@ -1,11 +1,15 @@
 # REACT.js
-all about react
 
+React Basics 
+1) working with GIT 
 
-working with GIT ->DONE
+2) javascript 
 
-javascript ->DONE
+3) React Hooks 
 
-advance css- sass .scss
+<hr />
+INSTALLATION OF advance css in package.json
+Advance css- sass .scss
 
 install using npm install node -sass
+
