@@ -13,4 +13,4 @@ Advance css- sass .scss
 
 install using npm install node -sass
 <hr/>
-https://mildaintrainings.com/wp-content/uploads/2017/11/react-logo.png
+<img src=https://mildaintrainings.com/wp-content/uploads/2017/11/react-logo.png/>
