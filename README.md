@@ -17,4 +17,16 @@ install using npm install node -sass
 
 <hr/>
 DEPLOYING surge !
-<iframe width="673" height="379" src="https://www.youtube.com/embed/-EjdMvYPSVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+First, ensure you have a recent version of Node.js
+
+Then, install Surge using npm by running the following command:
+
+<u>npm install --global surge</u>
+
+You may need to preface this command with sudo
+
+Now, run surge from within any directory, to publish that directory onto the web.
+
+That’s it! Running surge inside the directory you want to deploy will get your started. You’ll be able to create an account right from the command line, deploy, and host your site for free on Surge.
+
+<img src="https://surge.sh/images/help/getting-started-with-surge.gif"/>
