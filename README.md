@@ -20,8 +20,9 @@ DEPLOYING surge !
 First, ensure you have a recent version of Node.js
 
 Then, install Surge using npm by running the following command:
-
-<u>npm install --global surge</u>
+```
+npm install --global surge
+```
 
 You may need to preface this command with sudo
 
