@@ -11,7 +11,10 @@ React Basics
 INSTALLATION OF advance css in package.json
 Advance css- sass .scss
 
-install using npm install node -sass
+install using
+```
+npm install node -sass
+```
 <hr/>
 <img src="https://mildaintrainings.com/wp-content/uploads/2017/11/react-logo.png"/>
 
