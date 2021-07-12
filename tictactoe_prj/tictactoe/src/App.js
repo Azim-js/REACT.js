@@ -48,11 +48,14 @@ const App=()=>{
   return(
   < >
   <div className="app">
-    <h1>X-O GAME !</h1>
+    <h1><span className="text-green">X</span>-<span className="text-orange">O</span> GAME !</h1>
+    <h2 style={{fontWeight:'normal'}}>Current Game History</h2>
     <SquareMessage winner={winner} current={current} />
-    <Board board={current.board} handleSquareClick={handleSquareClick} winningSquares={winningSquares} />
-    <button type="button" onClick={onNewGame}>Start New Game</button>
+    <Board  board={current.board} handleSquareClick={handleSquareClick} winningSquares={winningSquares} />
+    <button type="button" className={`btn-reset ${winner ? 'active':' '}`} onClick={onNewGame}>Start New Game</button>
     <History history={history} moveTo={moveTo} currentMove={currentMove}/>
+    <div className="bg-balls"></div>
+    <div className="footer"> ~Done By Azim</div>
     </div>
     
   </>);
