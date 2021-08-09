@@ -4,7 +4,7 @@ import MainPageLayout from '../components/MainPageLayout'
 const Starred = () => {
     return (
         <MainPageLayout>
-            This is Starred page
+          this is starred page
         </MainPageLayout>
     )
 }
