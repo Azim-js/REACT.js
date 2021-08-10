@@ -46,8 +46,18 @@ const Home = () => {
     
     return (
         <MainPageLayout>
-              <input type="text" plceholder="Search for Something" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
+              <input type="text" placeholder="Search for Something" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
               <button type="button" onClick={search}>Search</button>
+              <div>
+              <label htmlFor="shows-search">
+                  Shows
+                  <input type="radio" vaue="shows"/>
+              </label>
+              <label htmlFor="actor-search">
+                Actors
+                <input type="radio" value="actor" />
+              </label>
+              </div>
                 {onRender()}
         </MainPageLayout>
     )
