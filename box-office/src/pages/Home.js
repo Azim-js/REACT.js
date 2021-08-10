@@ -46,7 +46,7 @@ const Home = () => {
     
     return (
         <MainPageLayout>
-              <input type="text" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
+              <input type="text" plceholder="Search for Something" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
               <button type="button" onClick={search}>Search</button>
                 {onRender()}
         </MainPageLayout>
