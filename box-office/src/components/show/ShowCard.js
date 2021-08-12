@@ -1,22 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import { StyledShowCard } from './ShowCard.styled'
+
+
 const ShowCard = ({id,image,name,summary}) => {
 
-    const summaryAsText=summary ? `${summary.split(' ').slice(0,10).join('').replace(/<.+?>/g,'')}...` : 'NO Description'
-
+    const summaryAsText=summary ? `${summary.split(' ').slice(0,10).join(' ').replace(/<.+?>/g,'')}...` : 'NO Description'
+    
     return (
-        <div>
-            <div>
+        <StyledShowCard>
+            <div className="img-wrapper">
                 <img src={image} alt="show" />
-            </div>
+            </div >
             <h1>{name}</h1>
             <p>{summaryAsText}</p>
-            <div>
+            <div className="btns">
                 <Link to={`/show/${id}`}>Read More</Link>
                 <button type="button">Starr Me</button>
             </div>
-            </div>
+            </StyledShowCard>
     )
 }
 
