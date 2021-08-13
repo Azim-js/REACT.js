@@ -5,3 +5,4 @@ export async function apiGet(queryString){
     .then(r=>r.json());
     return response;
 }
+// throw new Error('oops')
