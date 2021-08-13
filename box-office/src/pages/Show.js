@@ -4,6 +4,7 @@ import {apiGet} from '../misc/config'
 
 
 const Show = () => {
+    
     const [isLoading,setIsLoading]=useState(true);
     const [error,setError]=useState(null);
 
@@ -12,15 +13,25 @@ const Show = () => {
     // eslint-disable-next-line
     console.log("params",{id})
     useEffect(()=>{
+        let isMounted=true;
         apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`).then(result=>{
             setTimeout(()=>{
-                setShow(result);
-            setIsLoading(false);
+                if(isMounted){
+                    setShow(result);
+                    setIsLoading(false);
+                }
+               
             },2000)
         }).catch(err=>{
-            setError(err.message);
-            setIsLoading(false);
+            if(isMounted){
+                setError(err.message);
+                setIsLoading(false);
+            }
+            
         })
+        return ()=>{
+            isMounted=false;
+        }
     },[id])
 // eslint-disable-next-line
 console.log("show",show)
