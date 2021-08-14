@@ -6,6 +6,7 @@ import Details from '../components/show/Details'
 import Seasons from '../components/show/Seasons'
 import {apiGet} from '../misc/config'
 import Cast from '../components/show/Cast';
+import { InfoBlock, ShowPageWrapper } from './Show.styled';
 
 
 const Show = () => {
@@ -72,21 +73,21 @@ console.log('SHOW',show)
         return(<div> Data is Being loaded !!</div>)
     }
     return (
-        <div>
-            <ShowMainData image={show.image} name={show.name} rating={show.rating} tags={show.genres} />
-            <div>
+        <ShowPageWrapper>
+            <ShowMainData image={show.image} name={show.name} rating={show.rating} tags={show.genres} summary={show.summary}/>
+            <InfoBlock>
                 <h2>Details</h2>
                 <Details status={show.status} network={show.network} premiered={show.premiered} />
-            </div>
-            <div>
+            </ InfoBlock>
+            <InfoBlock>
                 <h2>Seasons</h2>
                 <Seasons seasons={show._embedded.seasons} />
-            </div>
-            <div>
+            </InfoBlock>
+            <InfoBlock>
                 <h2>Cast</h2>
                 <Cast cast={show._embedded.cast} />
-            </div>
-        </div>
+            </InfoBlock>
+        </ShowPageWrapper>
     )
 }
 
