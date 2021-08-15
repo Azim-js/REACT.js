@@ -1,6 +1,8 @@
 import {useReducer,useEffect} from 'react';
 
 function showReducer(prevState,action){
+    // eslint-disable-next-line
+    console.log(prevState,action)
     switch(action.type){
         case 'ADD': {
             return [...prevState,action.showId]
@@ -14,7 +16,8 @@ function showReducer(prevState,action){
 
 function usePersistedReducer(reduce,initalState,key) {
     const [state,dispatch]=useReducer(reduce,initalState,(initial)=>{
-
+        // eslint-disable-next-line
+        console.log(key)
         const persisted=localStorage.getItem(key)
         return (persisted ? JSON.parse(persisted):initial)
     });
