@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/REACT.js/box-office/static/css/main.9ce983f8.chunk.css",
-    "main.js": "/REACT.js/box-office/static/js/main.fd15af9b.chunk.js",
-    "main.js.map": "/REACT.js/box-office/static/js/main.fd15af9b.chunk.js.map",
-    "runtime-main.js": "/REACT.js/box-office/static/js/runtime-main.56f82e68.js",
-    "runtime-main.js.map": "/REACT.js/box-office/static/js/runtime-main.56f82e68.js.map",
-    "static/js/2.9cacc0f7.chunk.js": "/REACT.js/box-office/static/js/2.9cacc0f7.chunk.js",
-    "static/js/2.9cacc0f7.chunk.js.map": "/REACT.js/box-office/static/js/2.9cacc0f7.chunk.js.map",
-    "static/js/3.8f2b0462.chunk.js": "/REACT.js/box-office/static/js/3.8f2b0462.chunk.js",
-    "static/js/3.8f2b0462.chunk.js.map": "/REACT.js/box-office/static/js/3.8f2b0462.chunk.js.map",
-    "index.html": "/REACT.js/box-office/index.html",
-    "static/css/main.9ce983f8.chunk.css.map": "/REACT.js/box-office/static/css/main.9ce983f8.chunk.css.map",
-    "static/js/2.9cacc0f7.chunk.js.LICENSE.txt": "/REACT.js/box-office/static/js/2.9cacc0f7.chunk.js.LICENSE.txt",
-    "static/media/inotfound.6acb19ee.JPG": "/REACT.js/box-office/static/media/inotfound.6acb19ee.JPG"
+    "main.css": "/REACT.js/static/css/main.9ce983f8.chunk.css",
+    "main.js": "/REACT.js/static/js/main.fd15af9b.chunk.js",
+    "main.js.map": "/REACT.js/static/js/main.fd15af9b.chunk.js.map",
+    "runtime-main.js": "/REACT.js/static/js/runtime-main.a3d1c127.js",
+    "runtime-main.js.map": "/REACT.js/static/js/runtime-main.a3d1c127.js.map",
+    "static/js/2.5c5ad4b8.chunk.js": "/REACT.js/static/js/2.5c5ad4b8.chunk.js",
+    "static/js/2.5c5ad4b8.chunk.js.map": "/REACT.js/static/js/2.5c5ad4b8.chunk.js.map",
+    "static/js/3.8f2b0462.chunk.js": "/REACT.js/static/js/3.8f2b0462.chunk.js",
+    "static/js/3.8f2b0462.chunk.js.map": "/REACT.js/static/js/3.8f2b0462.chunk.js.map",
+    "index.html": "/REACT.js/index.html",
+    "static/css/main.9ce983f8.chunk.css.map": "/REACT.js/static/css/main.9ce983f8.chunk.css.map",
+    "static/js/2.5c5ad4b8.chunk.js.LICENSE.txt": "/REACT.js/static/js/2.5c5ad4b8.chunk.js.LICENSE.txt",
+    "static/media/inotfound.6acb19ee.JPG": "/REACT.js/static/media/inotfound.6acb19ee.JPG"
   },
   "entrypoints": [
-    "static/js/runtime-main.56f82e68.js",
-    "static/js/2.9cacc0f7.chunk.js",
+    "static/js/runtime-main.a3d1c127.js",
+    "static/js/2.5c5ad4b8.chunk.js",
     "static/css/main.9ce983f8.chunk.css",
     "static/js/main.fd15af9b.chunk.js"
   ]
