@@ -75,7 +75,7 @@ export function useShow(showId){
                     dispatch({type:'FETCH_SUCESS',show:result})
                 }
                
-            },2000)
+            },1000)
         }).catch(err=>{
             if(isMounted){
                 // setError(err.message);

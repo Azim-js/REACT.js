@@ -3,4 +3,11 @@ body {
   font-size: 18px;
   margin: 0;
   padding-top: 40px;
+  background-color: rgba(230, 229, 219, 0.938);
+}
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+ font-size: 1rem;
 }

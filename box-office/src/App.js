@@ -34,6 +34,9 @@ function App() {
       </div>
     </Route>
     </Switch>
+    <footer>
+      ~Done by Azim
+    </footer>
     </ThemeProvider>
   );
 }
