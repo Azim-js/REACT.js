@@ -34,3 +34,9 @@ Now, run surge from within any directory, to publish that directory onto the web
 That’s it! Running surge inside the directory you want to deploy will get your started. You’ll be able to create an account right from the command line, deploy, and host your site for free on Surge.
 
 <img src="https://surge.sh/images/help/getting-started-with-surge.gif"/>
+
+FOR ANIMATION 
+
+```
+npm install react-fade-in
+```
