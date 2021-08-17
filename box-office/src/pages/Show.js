@@ -1,36 +1,23 @@
 /* eslint-disable no-underscore-dangle */
-import React,{useEffect , useReducer} from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom'
 import ShowMainData from '../components/show/ShowMainData'
 import Details from '../components/show/Details'
 import Seasons from '../components/show/Seasons'
-import {apiGet} from '../misc/config'
+// import {apiGet} from '../misc/config'
 import Cast from '../components/show/Cast';
 import { InfoBlock, ShowPageWrapper } from './Show.styled';
+import { useShow } from '../misc/custom-hooks';
 
 
 const Show = () => {
     const {id}=useParams();
 
-    const reducer=(prevState,action)=>{
-        switch(action.type){
-            case 'FETCH_SUCESS':{
-                return {isLoading:false,show:action.show,error:null}
-            }
-            case 'FETCH_FAILED':{
-                return{...prevState,isLoading:false,error:action.error}
-            }
-            default: return prevState
-        }
-    }
+    const { show,isLoading,error}=useShow(id);
 
-    const initialSate={
-        show:null,
-        isLoading:true,
-        error:null
-    }
-    const [{show,isLoading,error},dispatch]=useReducer(reducer,initialSate)
-    // const [state,dispatch]=useReducer(reducer,initialSate)
+   
+    
+      // const [state,dispatch]=useReducer(reducer,initialSate)
     
     // const [isLoading,setIsLoading]=useState(true);
     // const [error,setError]=useState(null);
@@ -39,29 +26,7 @@ const Show = () => {
     // const [show,setShow]=useState(null);
     // eslint-disable-next-line
     console.log("params",{id})
-    useEffect(()=>{
-        let isMounted=true;
-        apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`).then(result=>{
-            setTimeout(()=>{
-                if(isMounted){
-                    // setShow(result);
-                    // setIsLoading(false);
-                    dispatch({type:'FETCH_SUCESS',show:result})
-                }
-               
-            },2000)
-        }).catch(err=>{
-            if(isMounted){
-                // setError(err.message);
-                // setIsLoading(false);
-                dispatch({type:'FETCH_FALSE',error:err.message})
-            }
-            
-        })
-        return ()=>{
-            isMounted=false;
-        }
-    },[id])
+    
 // eslint-disable-next-line
 console.log('SHOW',show)
 // console.log("state",state)
