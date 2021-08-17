@@ -40,3 +40,30 @@ FOR ANIMATION
 ```
 npm install react-fade-in
 ```
+
+Deployemnt in github pages 
+
+setp 1 pacakge.json (add your homepage where the app needs to be deployed)
+
+```
+"homepage":"https://myusername.github.io/my-app"
+```
+2 setp install github page config
+
+```
+npm install --save gh-pages
+```
+
+step 3 add scripts to package.json
+
+```
+  "scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+```
+
+step 5 run and deploy
+
+```
+npm run deploy
+```
