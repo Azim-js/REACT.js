@@ -1,22 +1,36 @@
-import React,{useState} from 'react'
+import React,{useState,useCallback} from 'react'
 import ActorGrid from '../components/actor/ActorGrid';
 import CustomRadio from '../components/CustomRadio';
 import MainPageLayout from '../components/MainPageLayout'
 import ShowGrid from '../components/show/ShowGrid';
 import {apiGet} from '../misc/config'
-import { useLastQuery } from '../misc/custom-hooks';
+import { useLastQuery, useWhyDidYouUpdate } from '../misc/custom-hooks';
 import { RadioInputsWrapper, SearchButtonWrapper, SearchInput } from './Home.styled';
+
+const onRender=(results)=>{
+    // eslint-disable-next-line
+    console.log("hi")
+    if(results && results.length===0) {
+        return <div>No Result!!!!</div>
+    }
+    if(results && results.length>0) {
+        return (results[0].show? <ShowGrid data={results}/> : <ActorGrid  data={results}/>)
+    }
+    
+
+    return null;
+}
 
 const Home = () => {
     const[input,setInput]=useLastQuery();
     const[results,setResults]=useState(null);
     const[searchOption,setSearchOption]=useState('shows');
     const isShowsSearch=searchOption==='shows';
-    const onInputChange=(ev)=>{
+    const onInputChange=useCallback((ev)=>{
         setInput(ev.target.value)
          // eslint-disable-next-line
         console.log(ev.target.value)
-    }
+    },[setInput])
     const search=()=>{
         // https://api.tvmaze.com/search/shows?q=men
 
@@ -36,23 +50,12 @@ const Home = () => {
             }
         }
 
-        const onRender=()=>{
-            // eslint-disable-next-line
-            console.log("hi")
-            if(results && results.length===0) {
-                return <div>No Result!!!!</div>
-            }
-            if(results && results.length>0) {
-                return (results[0].show? <ShowGrid data={results}/> : <ActorGrid  data={results}/>)
-            }
-            
-
-            return null;
-        }
-        const onRadioChange=(ev)=>{
+       
+        const onRadioChange=useCallback((ev)=>{
             setSearchOption(ev.target.value)
-        }
+        },[])
     
+        useWhyDidYouUpdate('home',{onInputChange,onKeyDown})
     return (
         <MainPageLayout>
               <SearchInput type="text" placeholder="Search for Something" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
@@ -69,7 +72,7 @@ const Home = () => {
               < SearchButtonWrapper>
               <button type="button" onClick={search}>Search</button>
               </SearchButtonWrapper>
-                {onRender()}
+                {onRender(results)}
         </MainPageLayout>
     )
 }
