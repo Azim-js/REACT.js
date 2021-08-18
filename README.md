@@ -67,3 +67,9 @@ step 5 run and deploy
 ```
 npm run deploy
 ```
+
+PROGRESSIVE WEB APP (PWA)
+
+1. SECURE -HTTPS
+2. SERVICE WORKER -(SCRIPT as proxy for server)
+3. MANIFEST FILE -(JSON File)
