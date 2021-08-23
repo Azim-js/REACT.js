@@ -226,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .details a, .details a:link, .details a:active{
-		color: #335e35e3;
+		color: #111010;
 		border: 2px solid #335e35e3 !important;
 		background-color: #fff;
 }
