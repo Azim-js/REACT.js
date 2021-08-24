@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, Divider, Drawer } from 'rsuite'
+import { Alert, Button, Divider, Drawer } from 'rsuite'
 import { useProfile } from '../../context/profile.context'
+import { database } from '../../misc/firebase';
 import EditableInput from '../EditableInput';
 
 const Dashboard= ({onSignOut}) => {
@@ -8,6 +9,14 @@ const Dashboard= ({onSignOut}) => {
     const onSave= async (newData)=>{
         // eslint-disable-next-line
         console.log(newData)
+
+        const userNickname=database.ref(`/profiles/${profile.uid}`).child('name');
+        try{
+            await userNickname.set(newData);
+            Alert.success('NickName has been set',4000);
+        }catch(err){
+            Alert.error(err.message,4000)
+        }
     }
     return <>
     <Drawer.Header>
