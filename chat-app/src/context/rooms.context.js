@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React,{createContext, useEffect, useState} from 'react'
+import React,{createContext, useContext, useEffect, useState} from 'react'
 import { database } from '../misc/firebase';
 import { transformToArrWithId } from '../misc/helpers';
 
@@ -29,4 +29,4 @@ export const RoomsProvider = ({children}) => {
     )
 }
 
-
+export const useRooms= ()=>useContext(RoomsContext);
